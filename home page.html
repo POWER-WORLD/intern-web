@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+    <link rel="stylesheet" href="home page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="logo.png" alt="Logo" class="logo-image">
+                <h1>TeJIS</h1>
+                <i class="fas fa-bars menu-icon"></i>
+            </div>
+
+            <div class="user-info">
+                <img src="pawan.jpg" alt="User Icon" class="user-img">
+                <h2>Hi, Pawan kumar</h2>
+                <p>ID: E173037</p>
+            </div>
+
+            <ul class="nav">
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#my-courses"><i class="fas fa-graduation-cap"></i> My Courses</a></li>
+                <li><a href="#assignments"><i class="fas fa-file-alt"></i> Assignments</a></li>
+                <li><a href="#time-table"><i class="fas fa-calendar-alt"></i> Time Table</a></li>
+                <li><a href="#forum"><i class="fas fa-comments"></i> Forum</a></li>
+                <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </div>
+
+
+        <div class="main-content">
+            <div class="header">
+                <span>Dashboard</span>
+                <div class="icons">
+                    <i class="fas fa-bell iconbell" id="bellIcon"></i>  <!-- Bell Icon -->
+                    <i class="fas fa-envelope notification-icon" id="notificationIcon"></i>  <!-- Notification Icon -->
+                    <div class="notification-panel" id="notificationPanel">
+                        <h4>Notifications</h4>
+                        <div class="notification-item">
+                            <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Profile Image">
+                            <div class="content">
+                                <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                                <span>1m ago</span>
+                            </div>
+                        </div>
+                        <div class="notification-item">
+                            <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Profile Image">
+                            <div class="content">
+                                <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                                <span>2m ago</span>
+                            </div>
+                        </div>
+                        <div class="notification-item">
+                            <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Profile Image">
+                            <div class="content">
+                                <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                                <span>5m ago</span>
+                            </div>
+                        </div>
+                        <div class="notification-item">
+                            <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Profile Image">
+                            <div class="content">
+                                <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                                <span>10m ago</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <p class="welcome">Welcome Back, Alex</p>
+            <div class="">
+
+            </div>
+            <!-- Three box section -->
+            <div class="box-section">
+                <div class="box">
+                    <i class="fas fa-file-alt">     .............</i>
+                </div>
+                <div class="box">
+                    <i class="fas fa-file-alt">     .............</i>
+                </div>
+                <div class="box">
+                    <i class="fas fa-file-alt">     ..............</i>
+                </div>
+            </div>
+
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="card">
+                    <p>Module Progress :</p>
+                    <h3>90%</h3>
+                </div>
+                <div class="card">
+                    <p>Assignment Progress :</p>
+                    <h3>10%</h3>
+                </div>
+                <div class="card">
+                    <p>Attendance Progress :</p>
+                    <h3>97%</h3>
+                </div>
+                <div class="card">
+                    <p>Course Progress :</p>
+                    <h3>50%</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ..................................script for bellicon................................ -->
+    <script>
+        // JavaScript to toggle between bell and stop bell icons
+        const bellIcon = document.getElementById('bellIcon');
+
+        bellIcon.addEventListener('click', function() {
+            // Check if the current icon is bell or stop bell
+            if (bellIcon.classList.contains('fa-bell')) {
+                bellIcon.classList.remove('fa-bell');
+                bellIcon.classList.add('fa-bell-slash');  // Switch to "stop bell"
+            } else {
+                bellIcon.classList.remove('fa-bell-slash');
+                bellIcon.classList.add('fa-bell');  // Switch back to "bell"
+            }
+        });
+    </script>
+    <!-- ...................................script for notificationicon.............................. -->
+    <script>
+        // Toggle the notification panel on icon click
+        const notificationIcon = document.getElementById('notificationIcon');
+        const notificationPanel = document.getElementById('notificationPanel');
+
+        notificationIcon.addEventListener('click', function () {
+            // Toggle the display of the notification panel
+            if (notificationPanel.style.display === 'none' || notificationPanel.style.display === '') {
+                notificationPanel.style.display = 'block';
+            } else {
+                notificationPanel.style.display = 'none';
+            }
+        });
+
+        // Close the notification panel if clicked outside
+        document.addEventListener('click', function (event) {
+            if (!notificationIcon.contains(event.target) && !notificationPanel.contains(event.target)) {
+                notificationPanel.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
