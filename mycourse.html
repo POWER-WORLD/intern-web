@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mycourse page</title>
+    <link rel="stylesheet" href="home page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .mycourse {
+            /* max-width: 800px; */
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .semester-navigation {
+            display: flex;
+            justify-content: space-between;
+            background-color: #001f3f;
+            padding: 10px;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .semester-navigation div {
+            flex: 1;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .table-container {
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .status {
+            text-align: right;
+            font-weight: bold;
+        }
+        .status.head {
+            text-align: right;
+            font-weight: bold;
+            color: blue;
+        }
+
+        .status.completed {
+            color: green;
+        }
+
+        .status.ongoing {
+            color: orange;
+        }
+
+        .status.pending {
+            color: red;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+
+        .pagination button {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .pagination button:hover {
+            background-color: #f0f0f0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="logo.png" alt="Logo" class="logo-image">
+                <h1>TeJIS</h1>
+                <i class="fas fa-bars menu-icon"></i>
+            </div>
+
+            <div class="user-info">
+                <img src="pawan.jpg" alt="User Icon" class="user-img">
+                <h2>Hi, Pawan kumar</h2>
+                <p>ID: E173037</p>
+            </div>
+
+            <ul class="nav">
+                <li><a href="home page.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="mycourse.html"><i class="fas fa-graduation-cap"></i> My Courses</a></li>
+                <li><a href="#assignments"><i class="fas fa-file-alt"></i> Assignments</a></li>
+                <li><a href="#time-table"><i class="fas fa-calendar-alt"></i> Time Table</a></li>
+                <li><a href="#forum"><i class="fas fa-comments"></i> Forum</a></li>
+                <li><a href="setting.html"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </div>
+
+
+        <div class="main-content">
+            <div class="header">
+                <span>My Courses</span>
+            </div>
+            <div class="mycourse">
+                <div class="semester-navigation">
+                    <div>Semester 01</div>
+                    <div>Semester 02</div>
+                    <div>Semester 03</div>
+                    <div>Semester 04</div>
+                </div>
+            
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Module</th>
+                                <th>Subject</th>
+                                <th>Unit</th>
+                                <th class="status head">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Module 01</td>
+                                <td>Programming</td>
+                                <td>Unit 06</td>
+                                <td class="status completed">Completed</td>
+                            </tr>
+                            <tr>
+                                <td>Module 02</td>
+                                <td>Networking</td>
+                                <td>Unit 09</td>
+                                <td class="status ongoing">Ongoing</td>
+                            </tr>
+                            <tr>
+                                <td>Module 03</td>
+                                <td>Database</td>
+                                <td>Unit 12</td>
+                                <td class="status pending">Pending</td>
+                            </tr>
+                            <tr>
+                                <td>Module 04</td>
+                                <td>Professional Practice</td>
+                                <td>Unit 08</td>
+                                <td class="status pending">Pending</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            
+                <div class="pagination">
+                    <button>Previous</button>
+                    <button>Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
